@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "GetSession";
+}
+
+
+
+
+
+
+Session : @ViewBag.Session
+
+
+@if (ViewBag.SessionProduct != null)
+{
+    <p>
+        @ViewBag.SessionProduct.Name
+    </p>
+
+    <p>
+        @ViewBag.SessionProduct.Description
+    </p>
+}
+
+
+
+

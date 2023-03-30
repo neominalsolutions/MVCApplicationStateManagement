@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "QueryString";
+}
+
+@inject IHttpContextAccessor accessor
+
+<h1>QueryString</h1>
+
+
+<span>
+  Request Param Value: @accessor.HttpContext.Request.Query["name"]
+</span>
+

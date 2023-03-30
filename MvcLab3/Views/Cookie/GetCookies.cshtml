@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "GetCookies";
+}
+
+@* View bazında bir servise bağlanmamızı sağlayan bir yöntem *@
+@inject IHttpContextAccessor httpContextAccessor
+
+<h1>Index</h1>
+
+
+@* Cookie aktif olarak HttpContext üzerinden okunambilmesi için bir request yönlendirme yapmak gerekir ondan dolayı bu sayfaya yönlendirme yaptık.*@
+
+UserName From Cookie : @httpContextAccessor.HttpContext.Request.Cookies["username"]
+
+
+@section Scripts {
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  	
+  // js ile cookie okuduk
+  const cookie =  $.cookie('username');
+  console.log('cookie value', cookie);
+  </script>
+
+}

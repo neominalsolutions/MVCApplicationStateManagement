@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "Routing";
+}
+
+
+@inject IHttpContextAccessor accessor
+
+
+<span>
+  Request Param Value: @accessor.HttpContext.Request.RouteValues["code"]
+</span>
+

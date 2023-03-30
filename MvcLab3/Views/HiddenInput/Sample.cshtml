@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+
+@* Buna basıltığında gizli olan input ile veriyi post etmemizi sağlayan bir veri taşıma yöntemi. Kullanıcıya göstermek istemediğimiz ama formdan taşımamız gereken alanlar için kullanılan bir yöntemdir. *@
+
+ <form method="post" asp-controller="HiddenInput" asp-action="SendCode">
+  <input type="hidden" name="verificationCode" value="x3534598" />     
+  <input type="submit" value="Send Code" />
+ </form>
+
+
+
+
