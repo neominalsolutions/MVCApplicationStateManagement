@@ -20,9 +20,10 @@ namespace MvcLab3.Controllers
     public async Task<IActionResult> Get(string key, string value)
     {
       // key value set ettik
+      // set ederken jsonString çalışmalıyız
       await _cacheService.SetValueAsync(key,value);
       // value redisten keye göre çektik
-      var data = await _cacheService.GetValueAsync(key);
+      var data = await _cacheService.GetValueAsync(key); // jsonString 
 
       return Json(data);
     }
